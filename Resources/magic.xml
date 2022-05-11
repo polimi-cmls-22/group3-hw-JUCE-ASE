@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<magic>
+  <Style name="default">
+    <Nodes/>
+    <Classes>
+      <plot-view border="2" background-color="black" border-color="silver" display="contents"/>
+      <nomargin margin="0" padding="0" border="0"/>
+      <group margin="5" padding="5" border="2" flex-direction="column"/>
+      <transparent background-color="transparentblack"/>
+    </Classes>
+    <Types>
+      <Slider border="0" slider-textbox="textbox-below"/>
+      <ToggleButton border="0" max-height="50" caption-size="0" text="Active"/>
+      <TextButton border="0" max-height="50" caption-size="0"/>
+      <ComboBox border="0" max-height="50" caption-size="0"/>
+      <Plot border="0" margin="0" padding="0" background-color="00000000"
+            radius="0"/>
+      <XYDragComponent border="0" margin="0" padding="0" background-color="00000000"
+                       radius="0"/>
+    </Types>
+  </Style>
+  <View id="root" resizable="0" resize-corner="0" flex-direction="column"
+        background-image="wood_background_jpg" margin="0" padding="0"
+        border="0" border-color="00000000" background-color="00000000"
+        tab-color="ED000000" background-gradient="" flex-align-self="auto"
+        display="flexbox" flex-justify-content="start" width="1280" height="800"
+        min-width="640" min-height="400">
+    <View class="parameters nomargin" padding="0" border="0" margin="10"
+          id="top" background-color="00000000">
+      <View background-color="00000000" radius="20" margin="10" border="2"
+            padding="0" border-color="FFA6A6A6">
+        <Plot source="oscilloscope" margin="0" border="0" background-color="FF000000"
+              padding="15" plot-decay="0.3" plot-color="FFFFA500" plot-fill-color="FFFFA500"
+              radius="20"/>
+      </View>
+      <View id="controls" padding="0" margin="5" border="4" flex-direction="column"
+            flex-shrink="1.0" flex-grow="1.3" background-image="top_plate_background_png"
+            background-color="00000000" image-placement="stretch" radius="37"
+            border-color="FFA6A6A6">
+        <View caption="Oscillators" class="group" flex-grow="3" flex-direction="row"
+              margin="0" padding="10" border="0" background-color="00000000"
+              caption-color="FF000000" caption-size="25" tab-color="" lookAndFeel="FoleysFinest">
+          <View flex-direction="column" margin="0" padding="0" lookAndFeel="FoleysFinest"
+                background-color="00000000">
+            <ComboBox caption="Wave" parameter="OSCWAVETYPE0" flex-grow="0.45" margin="0"
+                      padding="2" background-color="00000000" caption-color="FF000000"
+                      combo-background="FF000000" combo-menu-background="FF000000"
+                      combo-text="FFFFA500" combo-focused-outline="FFFFA500" combo-menu-text-highlight="FFFFA500"/>
+            <Slider caption="Gain" parameter="OSCGAIN0" margin="0" padding="0" background-color="00000000"
+                    caption-color="FF000000" slider-text="FF000000" slider-text-background="50FFFFFF"
+                    rotary-fill="FFFFA500"/>
+          </View>
+          <View flex-direction="column" margin="0" padding="0" background-color="00000000">
+            <ComboBox caption="Wave" parameter="OSCWAVETYPE1" flex-grow="0.45" margin="0"
+                      padding="2" background-color="00000000" caption-color="FF000000"
+                      combo-background="FF000000" combo-menu-background="FF000000"
+                      combo-text="FFFFA500" combo-menu-text-highlight="FFFFA500" combo-focused-outline="FFFFA500"/>
+            <Slider caption="Gain" parameter="OSCGAIN1" padding="0" margin="0" background-color="00000000"
+                    caption-color="FF000000" slider-text="FF000000" slider-text-background="50FFFFFF"
+                    rotary-fill="FFFFA500"/>
+          </View>
+          <View flex-direction="column" margin="0" padding="0" border="" background-color="00000000">
+            <ComboBox caption="Wave" parameter="OSCWAVETYPE2" lookAndFeel="FoleysFinest"
+                      tab-color="" image-placement="centred" flex-grow="0.45" margin="0"
+                      padding="2" background-color="00000000" caption-color="FF000000"
+                      combo-background="FF000000" combo-menu-background="FF000000"
+                      combo-text="FFFFA500" combo-menu-text-highlight="FFFFA500" combo-focused-outline="FFFFA500"/>
+            <Slider caption="Gain" parameter="OSCGAIN2" margin="0" padding="0" background-color="00000000"
+                    caption-color="FF000000" slider-text="FF000000" slider-text-background="50FFFFFF"
+                    rotary-fill="FFFFA500"/>
+          </View>
+        </View>
+        <View flex-direction="column" id="Others" margin="5" padding="10" border="0"
+              background-color="00000000">
+          <Slider caption="Noise Gain" parameter="NOISEGAIN" slider-type="linear-horizontal"
+                  margin="0" padding="0" border="0" caption-placement="centred-left"
+                  slider-textbox="textbox-right" background-color="00000000" caption-color="FF000000"
+                  slider-text-background="50FFFFFF" slider-text="FF000000" slider-thumb="FFFFA500"/>
+        </View>
+      </View>
+      <View background-color="00000000" border="2" border-color="FFA6A6A6"
+            radius="20" padding="0" margin="10">
+        <Plot source="analyzer" background-color="FF000000" border="0" padding="15"
+              plot-decay="0.3" plot-fill-color="FFFFA500" plot-inactive-color=""
+              plot-color="FFFFA500" radius="20" border-color="" margin="0"/>
+      </View>
+    </View>
+    <View flex-grow="0.6" padding="0" margin="7" id="effects" image-placement="stretch"
+          border-color="" background-color="" border="0" radius="0">
+      <View caption="Envelope" class="group" flex-grow="2.0" margin="4" padding="2"
+            border="6" flex-direction="row" background-color="00000000" radius="37"
+            border-color="FFA6A6A6" caption-color="FF000000" background-image="ADSR_background_plate_png"
+            image-placement="stretch">
+        <Slider caption="Attack" parameter="ATTACK" slider-type="rotary" margin="4"
+                padding="0" background-color="00000000" slider-text-background="50FFFFFF"
+                slider-text="FF000000" caption-color="FF000000" rotary-fill="FFFFA500"/>
+        <Slider caption="Decay" parameter="DECAY" slider-type="rotary" margin="4"
+                padding="0" border="" background-color="00000000" slider-text-background="50FFFFFF"
+                slider-text="FF000000" caption-color="FF000000" rotary-fill="FFFFA500"/>
+        <Slider caption="Sustain" parameter="SUSTAIN" slider-type="rotary" margin="4"
+                padding="0" background-color="00000000" slider-text-background="50FFFFFF"
+                slider-text="FF000000" caption-color="FF000000" rotary-fill="FFFFA500"/>
+        <Slider caption="Release" parameter="RELEASE" margin="4" padding="0"
+                background-color="00000000" slider-text-background="50FFFFFF"
+                slider-text="FF000000" caption-color="FF000000" rotary-fill="FFFFA500"/>
+      </View>
+      <View flex-direction="row" flex-grow="3.0" id="Filters" margin="4"
+            padding="0" border="6" background-color="00000000" radius="37"
+            border-color="FFA6A6A6" background-image="filters_background_plate_png"
+            image-placement="stretch">
+        <View caption="LPFilter" class="group" margin="" padding="8" flex-direction="row"
+              flex-grow="2.2" background-color="00000000" border="0" radius="37"
+              caption-color="FF000000">
+          <Slider caption="CutOff" parameter="LPFILTERCUTOFF" slider-type="linear-vertical"
+                  margin="4" padding="0" slider-textbox="textbox-below" background-color="00000000"
+                  slider-text-background="50FFFFFF" slider-text="FF000000" caption-color="FF000000"
+                  slider-thumb="FFFFA500"/>
+          <Slider caption="Resonance" parameter="LPFILTERRESONANCE" slider-type="rotary"
+                  margin="4" padding="0" flex-grow="2" background-color="00000000"
+                  slider-text-background="50FFFFFF" slider-text="FF000000" caption-color="FF000000"
+                  rotary-fill="FFFFA500"/>
+        </View>
+        <View caption="HPFilter" class="group" margin="0" padding="8" flex-direction="row"
+              flex-grow="2" background-color="00000000" border="8" border-color="FFA6A6A6"
+              caption-color="FF000000">
+          <Slider caption="CutOff" parameter="HPFILTERCUTOFF" slider-type="linear-vertical"
+                  margin="1" padding="4" slider-textbox="textbox-below" background-color="00000000"
+                  slider-text-background="50FFFFFF" slider-text="FF000000" caption-color="FF000000"
+                  slider-thumb="FFFFA500"/>
+          <Slider caption="Resonance" parameter="HPFILTERRESONANCE" slider-type="rotary"
+                  padding="0" margin="4" border="" flex-grow="2" background-color="00000000"
+                  slider-text-background="50FFFFFF" slider-text="FF000000" caption-color="FF000000"
+                  rotary-fill="FFFFA500"/>
+        </View>
+        <View caption="PeakFilter" class="group" margin="0" padding="6" flex-direction="row"
+              flex-grow="2.8" background-color="00000000" caption-color="FF000000"
+              border="0">
+          <Slider caption="CutOff" parameter="PEAKFILTERCUTOFF" slider-type="linear-vertical"
+                  margin="1" padding="4" slider-textbox="textbox-below" flex-grow="0.7"
+                  background-color="00000000" slider-text-background="50FFFFFF"
+                  slider-text="FF000000" caption-color="FF000000" slider-thumb="FFFFA500"/>
+          <View flex-grow="2" margin="1" padding="0" border="0" background-color="00000000">
+            <Slider caption="Resonance" parameter="PEAKFILTERRESONANCE" slider-type="rotary"
+                    margin="4" padding="0" background-color="00000000" slider-text-background="50FFFFFF"
+                    slider-text="FF000000" caption-color="FF000000" slider-thumb=""
+                    rotary-fill="FFFFA500"/>
+            <Slider caption="Gain" parameter="PEAKFILTERGAIN" slider-type="rotary"
+                    margin="4" padding="0" background-color="00000000" slider-text-background="50FFFFFF"
+                    slider-text="FF000000" caption-color="FF000000" slider-thumb=""
+                    rotary-fill="FFFFA500"/>
+          </View>
+        </View>
+      </View>
+      <View caption="LFO" class="group" margin="4" padding="7" flex-grow="0.5"
+            flex-direction="row" background-color="00000000" border="6" radius="37"
+            border-color="FFA6A6A6" caption-color="FF000000" background-image="lfo_background_png"
+            image-placement="stretch">
+        <Slider caption="Amount" parameter="PARAMLFOGAIN" margin="4" padding="0"
+                background-color="00000000" slider-text-background="50FFFFFF"
+                slider-text="FF000000" caption-color="FF000000" slider-thumb="FFFFA500"/>
+        <Slider caption="Freq" parameter="PARAMLFOWAVEFREQUENCY" margin="4" padding="0"
+                background-color="00000000" slider-text-background="50FFFFFF"
+                slider-text="FF000000" caption-color="FF000000" slider-thumb="FFFFA500"/>
+      </View>
+    </View>
+    <View border="0" flex-align-items="stretch" flex-wrap="nowrap" flex-align-self="stretch"
+          padding="0" background-color="000000A3" id="keyboard&amp;gain"
+          margin="10" flex-grow="0.9">
+      <View caption="Output" class="group" flex-direction="row" flex-grow="0.2"
+            margin="0" padding="10" border="0" background-color="00000067">
+        <View flex-direction="column" margin="0" padding="0" border="0" border-color="00000000"
+              background-color="00000000">
+          <Slider caption="Master Gain" parameter="OUTPUTGAIN" background-color="00000000"
+                  border-color="00000000" margin="0" lookAndFeel="Skeuomorphic"
+                  rotary-fill="FFFFA500"/>
+        </View>
+        <Meter source="output" flex-grow="0.35" background-color="00000000"
+               border-color="00000000"/>
+      </View>
+      <KeyboardComponent border="10" border-color="FF0F0A00"/>
+    </View>
+  </View>
+  <Styles>
+    <Style name="default">
+      <Nodes/>
+      <Classes>
+        <plot-view border="2" background-color="black" border-color="silver" display="contents"/>
+        <nomargin margin="0" padding="0" border="0"/>
+        <group margin="5" padding="5" border="2" flex-direction="column"/>
+        <transparent background-color="transparentblack"/>
+      </Classes>
+      <Types>
+        <Slider border="0" slider-textbox="textbox-below"/>
+        <ToggleButton border="0" max-height="50" caption-size="0" text="Active"/>
+        <TextButton border="0" max-height="50" caption-size="0"/>
+        <ComboBox border="0" max-height="50" caption-size="0"/>
+        <Plot border="0" margin="0" padding="0" background-color="00000000"
+              radius="0"/>
+        <XYDragComponent border="0" margin="0" padding="0" background-color="00000000"
+                         radius="0"/>
+      </Types>
+      <Palettes>
+        <default/>
+      </Palettes>
+    </Style>
+  </Styles>
+</magic>

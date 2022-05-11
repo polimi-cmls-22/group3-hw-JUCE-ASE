@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="UgwZUP" name="OranJam" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              pluginManufacturer="ASE" companyName="ASE">
+  <MAINGROUP id="UDpbAz" name="OranJam">
+    <GROUP id="{80D3A483-F4E1-1D15-09D5-4D4411536761}" name="Resources">
+      <FILE id="xlxazD" name="top_plate_background.png" compile="0" resource="1"
+            file="Resources/top_plate_background.png"/>
+      <FILE id="HrcnvS" name="magic.xml" compile="0" resource="1" file="Resources/magic.xml"/>
+      <FILE id="s0C6zN" name="wood_background.jpg" compile="0" resource="1"
+            file="Resources/wood_background.jpg"/>
+      <FILE id="XBD2J4" name="lfo_background.png" compile="0" resource="1"
+            file="Resources/lfo_background.png"/>
+      <FILE id="XyNq8N" name="ADSR_background_plate.png" compile="0" resource="1"
+            file="Resources/ADSR_background_plate.png"/>
+      <FILE id="jaK2yy" name="filters_background_plate.png" compile="0" resource="1"
+            file="Resources/filters_background_plate.png"/>
+    </GROUP>
+    <GROUP id="{5A94A55B-8106-AD41-B4EE-5C2BD7D6B649}" name="Plugin">
+      <GROUP id="{9B480995-D47C-8113-10EB-F6496C879684}" name="Source">
+        <FILE id="lsiT9p" name="ParametersManager.cpp" compile="1" resource="0"
+              file="Plugin/Source/ParametersManager.cpp"/>
+        <FILE id="JVGGJ6" name="ParametersManager.h" compile="0" resource="0"
+              file="Plugin/Source/ParametersManager.h"/>
+        <FILE id="eTiylb" name="PluginProcessor.cpp" compile="1" resource="0"
+              file="Plugin/Source/PluginProcessor.cpp"/>
+        <FILE id="l4SfiH" name="PluginProcessor.h" compile="0" resource="0"
+              file="Plugin/Source/PluginProcessor.h"/>
+        <FILE id="kD3HvC" name="OranJam.cpp" compile="1" resource="0" file="Plugin/Source/OranJam.cpp"/>
+        <FILE id="Bg4vwH" name="OranJam.h" compile="0" resource="0" file="Plugin/Source/OranJam.h"/>
+      </GROUP>
+      <FILE id="sWRO7y" name="CMakeLists.txt" compile="0" resource="1" file="Plugin/CMakeLists.txt"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"
+               FOLEYS_ENABLE_BINARY_DATA="1" FOLEYS_SHOW_GUI_EDITOR_PALLETTE="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="OranJam"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="OranJam"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_dsp" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_osc" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="foleys_gui_magic" path="Ext"/>
+        <MODULEPATH id="juce_cryptography" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="Oscillators" path="Modules"/>
+        <MODULEPATH id="Generators" path="Modules"/>
+        <MODULEPATH id="Filters" path="Modules"/>
+      </MODULEPATHS>
+    </VS2022>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="OranJam"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="OranJam"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_dsp" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_osc" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="foleys_gui_magic" path="Ext"/>
+        <MODULEPATH id="juce_cryptography" path="Ext\JUCE\modules"/>
+        <MODULEPATH id="Oscillators" path="Modules"/>
+        <MODULEPATH id="Generators" path="Modules"/>
+        <MODULEPATH id="Filters" path="Modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="Filters" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="foleys_gui_magic" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="Generators" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="Oscillators" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+  </MODULES>
+</JUCERPROJECT>
